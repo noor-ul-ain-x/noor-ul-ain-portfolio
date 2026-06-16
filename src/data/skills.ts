@@ -1,0 +1,77 @@
+import type { SkillCategory } from "@/types";
+
+export const skills: SkillCategory[] = [
+  {
+    category: "Backend & APIs",
+    skills: [
+      "Node.js",
+      "Express.js",
+      "Ruby on Rails",
+      "Python",
+      "TensorFlow",
+      "Django",
+      "Flask",
+      "REST APIs",
+      "GraphQL",
+      "WebSockets",
+      "SSE",
+      "System Design",
+      "Software Architecture",
+    ],
+  },
+  {
+    category: "Full-Stack",
+    skills: [
+      "React",
+      "Next.js",
+      "JavaScript",
+      "TypeScript",
+      "HTML5",
+      "CSS3",
+      "Tailwind CSS",
+      "Bootstrap",
+      "MUI",
+      "Chakra",
+      "Redux",
+      "React Query",
+      "Jotai",
+      "Vite",
+    ],
+  },
+  {
+    category: "Data & Messaging",
+    skills: [
+      "PostgreSQL",
+      "MySQL",
+      "SQL Server",
+      "SQLite",
+      "MongoDB",
+      "Redis",
+    ],
+  },
+  {
+    category: "DevOps & Cloud",
+    skills: [
+      "AWS EC2/S3/Lambda/RDS",
+      "Azure",
+      "Docker",
+      "Vercel",
+      "Cloudflare",
+      "CI/CD",
+      "Firebase",
+      "OAuth/Socialite",
+    ],
+  },
+  {
+    category: "AI & LLMs",
+    skills: [
+      "Prompt Engineering",
+      "LLM Evaluation",
+      "AI-Assisted Development",
+      "Human Feedback Evaluation",
+      "AI Output Review",
+      "Agentic AI Workflows",
+      "Function-Calling Evaluation",
+    ],
+  },
+];

@@ -1,0 +1,59 @@
+import type { Metadata } from "next";
+
+import {
+  SITE_DESCRIPTION,
+  SITE_NAME,
+  SITE_TAGLINE,
+  SITE_TITLE,
+  SITE_URL,
+} from "@/utils/constants";
+
+export function buildUrl(path = "/") {
+  return new URL(path, SITE_URL).toString();
+}
+
+export function createMetadata(
+  overrides: Metadata = {},
+): Metadata {
+  return {
+    metadataBase: new URL(SITE_URL),
+    title: {
+      default: SITE_TITLE,
+      template: `%s | ${SITE_NAME}`,
+    },
+    description: SITE_DESCRIPTION,
+    keywords: [
+      "Noor Ul Ain",
+      "Senior Full-Stack Engineer",
+      "Real-Time Systems",
+      "AI-Powered Products",
+      "Agentic AI",
+      "Prompt Engineering",
+      "LLM Evaluation",
+      "Technical Leadership",
+    ],
+    alternates: {
+      canonical: "/",
+    },
+    openGraph: {
+      type: "website",
+      url: buildUrl("/"),
+      siteName: SITE_NAME,
+      title: SITE_TITLE,
+      description: SITE_TAGLINE,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: SITE_TITLE,
+      description: SITE_TAGLINE,
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+    authors: [{ name: SITE_NAME }],
+    ...overrides,
+  };
+}
+
+export const siteMetadata = createMetadata();
