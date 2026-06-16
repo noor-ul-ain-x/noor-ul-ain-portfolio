@@ -2,6 +2,17 @@ import type { ExperienceEntry } from "@/types";
 
 export const experience: ExperienceEntry[] = [
   {
+    title: "AI Evaluation Contractor",
+    company: "Turing",
+    location: "Remote",
+    dateRange: "2025",
+    highlights: [
+      "Supported agentic AI evaluation workflows with prompt review and function-calling assessment.",
+      "Reviewed model output quality with structured criteria to keep feedback consistent across reviewers.",
+      "Contributed to LLM evaluation processes that support safer and more reliable AI products.",
+    ],
+  },
+  {
     title: "Team Lead (Contract)",
     company: "GrowthRunes",
     location: "UAE (Remote)",

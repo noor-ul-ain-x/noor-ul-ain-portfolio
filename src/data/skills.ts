@@ -2,25 +2,7 @@ import type { SkillCategory } from "@/types";
 
 export const skills: SkillCategory[] = [
   {
-    category: "Backend & APIs",
-    skills: [
-      "Node.js",
-      "Express.js",
-      "Ruby on Rails",
-      "Python",
-      "TensorFlow",
-      "Django",
-      "Flask",
-      "REST APIs",
-      "GraphQL",
-      "WebSockets",
-      "SSE",
-      "System Design",
-      "Software Architecture",
-    ],
-  },
-  {
-    category: "Full-Stack",
+    category: "Frontend",
     skills: [
       "React",
       "Next.js",
@@ -29,17 +11,56 @@ export const skills: SkillCategory[] = [
       "HTML5",
       "CSS3",
       "Tailwind CSS",
-      "Bootstrap",
-      "MUI",
-      "Chakra",
       "Redux",
       "React Query",
       "Jotai",
       "Vite",
+      "MUI",
+      "Chakra",
+      "Bootstrap",
     ],
   },
   {
-    category: "Data & Messaging",
+    category: "Backend & APIs",
+    skills: [
+      "Node.js",
+      "Express.js",
+      "Ruby on Rails",
+      "Python",
+      "Django",
+      "Flask",
+      "REST APIs",
+      "GraphQL",
+      "System Design",
+      "Software Architecture",
+    ],
+  },
+  {
+    category: "AI & LLM Engineering",
+    skills: [
+      "TensorFlow",
+      "Prompt Engineering",
+      "LLM Evaluation",
+      "AI-Assisted Development",
+      "Human Feedback Evaluation",
+      "AI Output Review",
+      "Agentic AI Workflows",
+      "Function-Calling Evaluation",
+    ],
+  },
+  {
+    category: "Real-Time Systems",
+    skills: [
+      "WebSockets",
+      "Server-Sent Events",
+      "Socket-based chat systems",
+      "Multi-channel messaging",
+      "Live notifications",
+      "Real-time updates",
+    ],
+  },
+  {
+    category: "Databases",
     skills: [
       "PostgreSQL",
       "MySQL",
@@ -50,7 +71,7 @@ export const skills: SkillCategory[] = [
     ],
   },
   {
-    category: "DevOps & Cloud",
+    category: "Cloud & DevOps",
     skills: [
       "AWS EC2/S3/Lambda/RDS",
       "Azure",
@@ -60,18 +81,6 @@ export const skills: SkillCategory[] = [
       "CI/CD",
       "Firebase",
       "OAuth/Socialite",
-    ],
-  },
-  {
-    category: "AI & LLMs",
-    skills: [
-      "Prompt Engineering",
-      "LLM Evaluation",
-      "AI-Assisted Development",
-      "Human Feedback Evaluation",
-      "AI Output Review",
-      "Agentic AI Workflows",
-      "Function-Calling Evaluation",
     ],
   },
 ];

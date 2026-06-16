@@ -53,6 +53,40 @@ export interface CareerHighlight {
 
 export interface EngineeringImpactItem {
   title: string;
-  metric: string;
+  problem: string;
+  technologies: string[];
+  impact: string;
+}
+
+export interface GitHubStat {
+  label: string;
+  value: string;
   description: string;
+}
+
+export interface GitHubRepository {
+  name: string;
+  description: string;
+  href: string;
+  language?: string;
+}
+
+export interface GitHubSectionData {
+  profileUrl: string;
+  profileLabel: string;
+  stats: GitHubStat[];
+  contributionTitle: string;
+  contributionDescription: string;
+  pinnedRepositories: GitHubRepository[];
+}
+
+export interface ProfileSnapshotItem {
+  label: string;
+  value: string;
+}
+
+export interface SectionCopy {
+  eyebrow?: string;
+  title: string;
+  description?: string;
 }

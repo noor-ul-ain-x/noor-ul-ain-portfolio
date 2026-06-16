@@ -5,6 +5,7 @@ import {
   SITE_NAME,
   SITE_TAGLINE,
   SITE_TITLE,
+  SITE_OG_IMAGE,
   SITE_URL,
 } from "@/utils/constants";
 
@@ -41,11 +42,20 @@ export function createMetadata(
       siteName: SITE_NAME,
       title: SITE_TITLE,
       description: SITE_TAGLINE,
+      images: [
+        {
+          url: buildUrl(SITE_OG_IMAGE),
+          width: 952,
+          height: 1180,
+          alt: SITE_NAME,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title: SITE_TITLE,
       description: SITE_TAGLINE,
+      images: [buildUrl(SITE_OG_IMAGE)],
     },
     robots: {
       index: true,

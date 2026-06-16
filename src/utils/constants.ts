@@ -14,8 +14,9 @@ export const SITE_PHONE = "+92-333-0034434";
 export const SITE_GITHUB = "https://github.com/noor-ul-ain-x";
 export const SITE_LINKEDIN =
   "https://linkedin.com/in/noor-ul-ain-abb7351b2/";
-export const RESUME_PATH = "/resume/NoorUlAin.pdf";
+export const RESUME_PATH = "/noorulain.pdf";
 export const THEME_STORAGE_KEY = "noor-ul-ain-theme";
+export const SITE_OG_IMAGE = "/images/dp.png";
 
 export const SECTION_IDS = [
   "hero",

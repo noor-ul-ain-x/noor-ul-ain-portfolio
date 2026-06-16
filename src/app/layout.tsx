@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Navbar, Footer, ScrollProgress } from "@/components/layout";
 import ThemeProvider from "@/providers/ThemeProvider";
 import { siteMetadata } from "@/lib/seo";
 import "./globals.css";
@@ -16,8 +17,15 @@ export default function RootLayout({
       suppressHydrationWarning
       className="h-full antialiased"
     >
-      <body className="min-h-screen">
-        <ThemeProvider>{children}</ThemeProvider>
+      <body className="min-h-screen bg-[color:var(--background)] text-[color:var(--foreground)]">
+        <ThemeProvider>
+          <ScrollProgress />
+          <Navbar />
+          <div className="flex min-h-screen flex-col">
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

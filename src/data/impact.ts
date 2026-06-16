@@ -2,27 +2,38 @@ import type { EngineeringImpactItem } from "@/types";
 
 export const impact: EngineeringImpactItem[] = [
   {
-    title: "Application load time",
-    metric: "35% faster",
-    description:
-      "Improved application load time by optimizing API interactions, reducing redundant requests, and implementing efficient client-side state management.",
+    title: "Real-Time Communication Platform",
+    problem:
+      "Users needed responsive communication across user-to-user and user-to-agent flows without relying on polling-heavy updates.",
+    technologies: [
+      "WebSockets",
+      "Server-Sent Events",
+      "SMS",
+      "Email",
+      "WhatsApp",
+    ],
+    impact:
+      "Delivered a real-time chat platform and reduced update overhead through SSE-based delivery.",
   },
   {
-    title: "Real-time updates",
-    metric: "~40% less overhead",
-    description:
-      "Implemented Server-Sent Events (SSE) to reduce polling overhead and improve real-time update efficiency.",
+    title: "LLM Evaluation Workflows",
+    problem:
+      "AI features need repeatable review loops so teams can compare outputs, assess tool use, and keep quality consistent.",
+    technologies: [
+      "Prompt Engineering",
+      "LLM Evaluation",
+      "Agentic AI Workflows",
+      "Function-Calling Evaluation",
+    ],
+    impact:
+      "Established a stronger evaluation mindset around AI-assisted development and quality review.",
   },
   {
-    title: "Chat platform delivery",
-    metric: "Socket-based",
-    description:
-      "Architected and delivered a real-time chat platform supporting user-to-user and user-to-agent communication.",
-  },
-  {
-    title: "3D avatar rendering",
-    metric: "Three.js + R3F",
-    description:
-      "Built a real-time 3D avatar rendering system to dynamically render Ready Player Me avatars.",
+    title: "3D Avatar Experiences",
+    problem:
+      "The product needed a dynamic avatar experience that could render rich visuals in real time.",
+    technologies: ["Three.js", "react-three/fiber", "Ready Player Me"],
+    impact:
+      "Built a live 3D avatar rendering system for modern product experiences.",
   },
 ];

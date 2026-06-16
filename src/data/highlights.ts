@@ -8,21 +8,21 @@ export const highlights: CareerHighlight[] = [
       "Designing scalable systems, reviewing complex codebases, and solving challenging engineering problems across modern web technologies.",
   },
   {
-    label: "Real-Time Work",
-    value: "Socket + SSE",
+    label: "Load Time",
+    value: "35% faster",
     description:
-      "Built real-time chat, messaging, and update flows with WebSockets, Server-Sent Events, and multi-channel delivery.",
+      "Improved application load time by optimizing API interactions, reducing redundant requests, and tightening client-side state management.",
   },
   {
-    label: "AI-Assisted Delivery",
-    value: "Fast-paced",
+    label: "Polling",
+    value: "40% reduced",
     description:
-      "Used AI-assisted development tools to accelerate implementation, validate solutions, and improve engineering productivity.",
+      "Applied Server-Sent Events to reduce polling overhead and improve real-time update efficiency.",
   },
   {
-    label: "Leadership",
-    value: "Code reviews",
+    label: "AI Evaluation",
+    value: "Prompt-focused",
     description:
-      "Mentored engineers, established best practices, and translated ambiguous requirements into scalable technical solutions.",
+      "Built experience around prompt engineering, LLM evaluation, AI-assisted development, and function-calling review workflows.",
   },
 ];
