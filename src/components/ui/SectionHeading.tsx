@@ -28,11 +28,11 @@ export default function SectionHeading({
           {eyebrow ? <span>{eyebrow}</span> : null}
         </p>
       ) : null}
-      <h2 className="mt-8 text-4xl font-semibold tracking-tight text-balance sm:text-5xl lg:text-6xl">
+      <h2 className="mt-6 text-3xl font-semibold tracking-tight text-balance sm:text-4xl lg:text-5xl">
         {title}
       </h2>
       {description ? (
-        <p className="mt-6 max-w-2xl text-base leading-7 text-[color:var(--muted-foreground)] sm:text-lg">
+        <p className="mt-4 max-w-2xl text-sm leading-7 text-[color:var(--muted-foreground)] sm:text-base">
           {description}
         </p>
       ) : null}

@@ -8,6 +8,7 @@ import { useScrollSpy } from "@/hooks/useScrollSpy";
 import MobileMenu from "./MobileMenu";
 import { cn } from "@/utils/cn";
 import { profile } from "@/data/profile";
+import ThemeToggle from "../ui/ThemeToggle";
 
 export default function Navbar() {
   const activeId = useScrollSpy();
@@ -58,6 +59,9 @@ export default function Navbar() {
             Resume
             <ArrowDownToLine className="h-4 w-4" />
           </a>
+          <div className="hidden items-center gap-3 lg:flex">
+          <ThemeToggle />
+        </div>
         </div>
 
         <MobileMenu />

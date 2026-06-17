@@ -1,4 +1,4 @@
-import { ArrowDownToLine, BriefcaseBusiness, Calendar, GitBranch, Mail } from "lucide-react";
+import { ArrowDownToLine, BriefcaseBusiness, Calendar, GitBranch, Mail, Phone, MessageSquare, EqualApproximatelyIcon } from "lucide-react";
 
 import { ButtonLink } from "@/components/ui/Button";
 import Card from "@/components/ui/Card";
@@ -10,7 +10,7 @@ import { profile } from "@/data/profile";
 export default function ContactSection() {
   const metadata = [
     { label: "Availability", value: "Remote engineering roles, AI engineering opportunities, consulting" },
-    { label: "Response time", value: "Usually within 24h" },
+    { label: "Response time", value: "Within 24h" },
     { label: "Location", value: "Pakistan · Remote global" },
     { label: "Current focus", value: "Real-time systems, AI products, agentic workflows" },
   ];
@@ -33,10 +33,6 @@ export default function ContactSection() {
             </p>
 
             <div className="mt-12 flex flex-col justify-center gap-3 sm:flex-row sm:flex-wrap">
-              <ButtonLink href={`mailto:${profile.contact.email}`} variant="primary">
-                <Mail className="h-4 w-4" />
-                {profile.contact.email}
-              </ButtonLink>
               <SocialButton href={`mailto:${profile.contact.email}?subject=Call%20request%20with%20Noor%20Ul%20Ain`}>
                 <Calendar className="h-4 w-4" />
                 Request a Call
@@ -53,6 +49,36 @@ export default function ContactSection() {
                 <ArrowDownToLine className="h-4 w-4" />
                 Resume Download
               </ButtonLink>
+            </div>
+
+            <div className="mt-6 flex flex-wrap justify-center items-center gap-4 text-sm text-[color:var(--muted-foreground)]">
+              <a
+                href="tel:+923330034434"
+                className="inline-flex items-center gap-2 hover:text-[color:var(--foreground)] transition"
+              >
+                <Phone className="h-4 w-4" />
+                +92 333 0034434
+              </a>
+
+              <a
+                href="https://wa.me/923330034434"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 hover:text-[color:var(--foreground)] transition"
+              >
+                <MessageSquare className="h-4 w-4" />
+                WhatsApp chat
+              </a>
+              <a
+                href="https://wa.me/923330034434"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 hover:text-[color:var(--foreground)] transition"
+              >
+                <Mail className="h-4 w-4" />
+                  {profile.contact.email}
+              </a>
+              <span className="h-4 border-l border-[color:var(--border)]" aria-hidden="true" />
             </div>
 
             <div className="mt-16 grid border-l border-t border-[color:var(--border)] text-left sm:grid-cols-2 lg:grid-cols-4">

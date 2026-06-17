@@ -13,6 +13,12 @@ const courseTags = [
   "Computer Networks",
   "Web Engineering",
   "AI Coursework (placeholder)",
+  "Applied ML",
+  "Artificial Intelligence",
+  "Cloud Computing",
+  "Software Testing",
+  "OOAD",
+  "Discrete Structures"
 ];
 
 export default function EducationSection() {

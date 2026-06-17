@@ -10,9 +10,9 @@ const recentCompanies = ["Turing", "GrowthRunes", "Kollegio", "Devsinc"];
 
 export default function HeroAvatar() {
   return (
-    <Card className="p-6 sm:p-8 lg:p-10">
-      <div className="flex items-start gap-6">
-        <Avatar src="/images/dp.png" alt={profile.name} className="h-24 w-24 rounded-lg sm:h-28 sm:w-28" />
+    <Card className="p-4 sm:p-6 lg:p-8">
+      <div className="flex items-start gap-5">
+        <Avatar src="/images/dp.png" alt={profile.name} className="h-20 w-20 rounded-lg sm:h-24 sm:w-24" />
         <div className="min-w-0 pt-1">
           <p className="text-xs font-semibold uppercase tracking-[0.32em] text-neutral-500">
             {profile.name}
@@ -26,7 +26,7 @@ export default function HeroAvatar() {
         </div>
       </div>
 
-      <div className="mt-10 space-y-8 border-t border-[color:var(--border)] pt-8">
+      <div className="mt-8 space-y-6 border-t border-[color:var(--border)] pt-6">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.32em] text-neutral-500">
             Recent Experience
@@ -54,7 +54,7 @@ export default function HeroAvatar() {
           </p>
         </div>
 
-        <div className="grid gap-4 border-t border-[color:var(--border)] pt-8 sm:grid-cols-2">
+        <div className="grid gap-4 border-t border-[color:var(--border)] pt-6 sm:grid-cols-2">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-neutral-500">
               Location
@@ -95,7 +95,7 @@ export default function HeroAvatar() {
           </div>
         </div>
 
-        <div className="border-t border-[color:var(--border)] pt-8">
+        {/* <div className="border-t border-[color:var(--border)] pt-8">
           <p className="text-xs font-semibold uppercase tracking-[0.32em] text-neutral-500">
             Recent Companies
           </p>
@@ -110,7 +110,7 @@ export default function HeroAvatar() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </Card>
   );

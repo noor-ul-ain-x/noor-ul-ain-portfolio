@@ -47,8 +47,8 @@ export default function HeroSection() {
             <div className="flex items-center gap-4">
               <span className="h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_0_5px_rgba(52,211,153,0.12)]" />
               <span className="h-px w-10 bg-[color:var(--border)]" />
-              <p className="max-w-xl bg-white/[0.08] px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.42em] text-[color:var(--foreground)] sm:text-xs">
-                Available for remote engineering roles, AI engineering opportunities, and consulting.
+              <p className=" bg-white/[0.08] px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.42em] text-[color:var(--foreground)] sm:text-xs">
+                Available for remote engineering roles and consulting             
               </p>
             </div>
 
@@ -56,13 +56,13 @@ export default function HeroSection() {
               <p className="text-sm font-medium uppercase tracking-[0.3em] text-neutral-500">
                 {profile.name}
               </p>
-              <h1 className="max-w-5xl text-5xl font-semibold leading-[0.98] tracking-tight text-balance sm:text-6xl lg:text-7xl xl:text-[88px]">
+              <h1 className="max-w-5xl text-[44px] font-semibold leading-[0.98] tracking-tight text-balance sm:text-[44px] xl:text-[56px]">
                 Senior Full-Stack Engineer for{" "}
                 <span className="serif-accent">real-time systems</span>,{" "}
                 <span className="serif-accent">AI-powered products</span>, and{" "}
                 <span className="serif-accent">agentic AI experiences</span>.
               </h1>
-              <p className="max-w-3xl text-lg leading-8 text-[color:var(--muted-foreground)] sm:text-xl">
+              <p className="max-w-3xl text-base leading-7 text-[color:var(--muted-foreground)] sm:text-lg">
                 {profile.summary}
               </p>
             </div>
@@ -74,7 +74,7 @@ export default function HeroSection() {
             <motion.div variants={itemVariants} className="grid border-y border-[color:var(--border)] sm:grid-cols-4">
               {metrics.map((metric) => (
                 <div key={metric.label} className="border-[color:var(--border)] py-6 sm:border-r sm:px-8 sm:first:pl-0 sm:last:border-r-0">
-                  <p className="serif-accent text-4xl leading-none text-[color:var(--foreground)]">{metric.value}</p>
+                  <p className="serif-accent text-3xl leading-none text-[color:var(--foreground)]">{metric.value}</p>
                   <p className="mt-4 max-w-[180px] text-xs font-semibold uppercase tracking-[0.28em] text-neutral-500">
                     {metric.label}
                   </p>

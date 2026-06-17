@@ -9,10 +9,10 @@ import { profile } from "@/data/profile";
 export default function HeroCTA() {
   return (
     <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-      <ButtonLink href={profile.contact.resume} download variant="primary">
+      {/* <ButtonLink href={profile.contact.resume} download>
         <ArrowDownToLine className="h-4 w-4" />
         Resume
-      </ButtonLink>
+      </ButtonLink> */}
       <SocialButton href={profile.contact.github}>
         <GitBranch className="h-4 w-4" />
         GitHub

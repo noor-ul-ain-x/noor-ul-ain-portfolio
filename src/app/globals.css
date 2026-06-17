@@ -29,6 +29,11 @@ html {
   background: var(--background);
 }
 
+/* Slightly reduce global typographic scale to create ~10-15% visual reduction */
+html {
+  font-size: 88%;
+}
+
 body {
   min-height: 100vh;
   background: var(--background);
