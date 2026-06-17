@@ -18,7 +18,7 @@ export default function Navbar() {
       <div className="mx-auto flex h-[68px] max-w-[1536px] items-center justify-between px-5 sm:px-8 lg:px-12 xl:px-16">
         <a href="#hero" className="group inline-flex items-center gap-3 text-sm font-semibold tracking-tight">
           <span className="relative h-9 w-9 overflow-hidden rounded-full border border-[color:var(--border)] bg-[color:var(--card)]">
-            <Image src="/images/dp.png" alt={SITE_NAME} fill sizes="36px" className="object-cover" priority />
+            <Image src="/images/profile.png" alt={SITE_NAME} fill sizes="36px" className="object-cover" priority />
           </span>
           <span className="text-base text-[color:var(--foreground)]">{SITE_NAME}</span>
         </a>

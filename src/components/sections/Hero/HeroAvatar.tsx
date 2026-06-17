@@ -12,7 +12,7 @@ export default function HeroAvatar() {
   return (
     <Card className="p-4 sm:p-6 lg:p-8">
       <div className="flex items-start gap-5">
-        <Avatar src="/images/dp.png" alt={profile.name} className="h-20 w-20 rounded-lg sm:h-24 sm:w-24" />
+        <Avatar src="/images/profile.png" alt={profile.name} className="h-20 w-20 rounded-lg sm:h-24 sm:w-24" />
         <div className="min-w-0 pt-1">
           <p className="text-xs font-semibold uppercase tracking-[0.32em] text-neutral-500">
             {profile.name}
