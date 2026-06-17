@@ -9,7 +9,7 @@ export default function Card({
   return (
     <div
       className={cn(
-        "rounded-3xl border border-[color:var(--border)] bg-[color:var(--surface)]/95 shadow-[0_20px_80px_rgba(15,23,42,0.12)] backdrop-blur",
+        "rounded-lg border border-[color:var(--border)] bg-[color:var(--card)] transition-colors duration-200",
         className,
       )}
       {...props}

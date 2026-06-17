@@ -1,4 +1,3 @@
-import Card from "@/components/ui/Card";
 import type { SkillCategory as SkillCategoryType } from "@/types";
 
 import SkillBadge from "./SkillBadge";
@@ -9,13 +8,13 @@ interface SkillCategoryProps {
 
 export default function SkillCategory({ category }: SkillCategoryProps) {
   return (
-    <Card className="p-6">
-      <h3 className="text-lg font-semibold">{category.category}</h3>
-      <div className="mt-4 flex flex-wrap gap-2">
+    <div className="grid gap-6 border-b border-[color:var(--border)] p-6 last:border-b-0 sm:p-8 lg:grid-cols-[260px_1fr]">
+      <h3 className="text-sm font-semibold uppercase tracking-[0.32em] text-neutral-500">{category.category}</h3>
+      <div className="flex flex-wrap gap-2">
         {category.skills.map((skill) => (
           <SkillBadge key={skill} skill={skill} />
         ))}
       </div>
-    </Card>
+    </div>
   );
 }

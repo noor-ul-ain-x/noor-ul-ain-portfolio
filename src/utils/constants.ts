@@ -20,24 +20,20 @@ export const SITE_OG_IMAGE = "/images/dp.png";
 
 export const SECTION_IDS = [
   "hero",
-  "career-highlights",
+  "services",
   "about",
+  "work",
   "experience",
-  "tech-stack",
-  "engineering-impact",
-  "github-activity",
-  "resume-cta",
+  "skills",
+  "toolbox",
+  "education",
   "contact",
 ] as const;
 
 export const NAV_ITEMS = [
-  { label: "Hero", href: "#hero" },
-  { label: "Career Highlights", href: "#career-highlights" },
-  { label: "About", href: "#about" },
+  { label: "Services", href: "#services" },
+  { label: "Work", href: "#work" },
   { label: "Experience", href: "#experience" },
-  { label: "Tech Stack", href: "#tech-stack" },
-  { label: "Impact", href: "#engineering-impact" },
-  { label: "GitHub", href: "#github-activity" },
-  { label: "Resume", href: "#resume-cta" },
+  { label: "Skills", href: "#skills" },
   { label: "Contact", href: "#contact" },
 ] satisfies readonly NavigationItem[];

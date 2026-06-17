@@ -1,68 +1,102 @@
+import { Gauge, GitBranch, Users } from "lucide-react";
+
 import Badge from "@/components/ui/Badge";
-import Card from "@/components/ui/Card";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { experience } from "@/data/experience";
 import { profile } from "@/data/profile";
 import ProfileSnapshot from "./ProfileSnapshot";
 
-const focusAreas = [
-  "Real-Time Systems",
-  "Agentic AI",
+const storyTags = [
+  "Engineering Leadership",
   "Prompt Engineering",
-  "LLM Evaluation",
+  "Real-Time Systems",
+  "System Design",
+  "Agentic AI",
+  "Technical Architecture",
+];
+
+const impactBlocks = [
+  {
+    title: "From product ambiguity to shipped systems",
+    description:
+      "I map the product workflow, define the data and API boundaries, and turn unclear requirements into maintainable full-stack implementation.",
+    icon: GitBranch,
+  },
+  {
+    title: "Performance with measurable outcomes",
+    description:
+      "Recent work improved load time by 35% and reduced polling overhead by approximately 40% through tighter API and real-time delivery patterns.",
+    icon: Gauge,
+  },
+  {
+    title: "Senior ownership in remote teams",
+    description:
+      "I write clearly, lead review loops, mentor engineers, and keep delivery moving across distributed product and engineering teams.",
+    icon: Users,
+  },
 ];
 
 export default function AboutSection() {
   const snapshot = [
+    { label: "Based In", value: "Pakistan" },
     { label: "Experience", value: "5+ years" },
-    { label: "Education", value: profile.education.institution },
-    { label: "Degree", value: profile.education.degree },
-    { label: "Latest role", value: experience[0].company },
+    { label: "Focus", value: "AI products · Real-time systems · Full-stack architecture" },
+    { label: "Availability", value: "Remote · Global" },
+    { label: "Email", value: profile.contact.email },
   ];
 
   return (
-    <section id="about" className="py-20 sm:py-24">
+    <section id="about" className="section-shell border-b border-[color:var(--border)] py-20 sm:py-24">
       <Container>
-        <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
-          <div className="space-y-6">
+        <div className="grid gap-14 lg:grid-cols-[1fr_0.92fr] lg:items-start">
+          <div>
             <SectionHeading
+              number="02"
               eyebrow="About"
-              title="Engineering judgment for real-time and AI-driven products."
-              description={profile.summary}
+              title={<>Engineering judgment for <span className="serif-accent">real products</span></>}
             />
-            <Card className="p-6">
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--muted-foreground)]">
-                Areas of specialization
+            <div className="mt-14 max-w-3xl space-y-8">
+              <p className="text-3xl font-medium leading-tight tracking-tight text-[color:var(--foreground)]">
+                I build full-stack and real-time systems where product quality matters: APIs, messaging flows, AI-assisted workflows, evaluation loops, and interfaces that teams can operate after launch.
               </p>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {profile.coreStrengths.map((strength) => (
-                  <Badge key={strength}>{strength}</Badge>
-                ))}
-              </div>
-              <p className="mt-6 text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--muted-foreground)]">
-                Current focus areas
+              <p className="text-lg leading-8 text-[color:var(--muted-foreground)]">
+                My recent work spans agentic AI evaluation at Turing, senior engineering at GrowthRunes, product engineering at Kollegio, and client-facing delivery at Devsinc. The common thread is practical engineering: simplify workflows, improve system behavior, and leave teams with software they can trust.
               </p>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {focusAreas.map((area) => (
-                  <Badge key={area} className="bg-white/10">
-                    {area}
-                  </Badge>
-                ))}
-              </div>
-            </Card>
+              <p className="text-lg leading-8 text-[color:var(--muted-foreground)]">
+                I am strongest in ambiguous product environments where business process, data, APIs, and infrastructure overlap. I can own implementation details, communicate tradeoffs, and turn loose operational problems into maintainable technical systems.
+              </p>
+            </div>
+
+            <div className="mt-12 flex flex-wrap gap-3">
+              {storyTags.map((tag) => (
+                <Badge key={tag} className="uppercase tracking-[0.22em]">
+                  {tag}
+                </Badge>
+              ))}
+            </div>
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-0 border-t border-[color:var(--border)]">
+            {impactBlocks.map((block) => {
+              const Icon = block.icon;
+
+              return (
+                <div key={block.title} className="grid grid-cols-[48px_1fr] gap-6 border-b border-[color:var(--border)] py-8">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-lg border border-[color:var(--border)] bg-white/[0.03] text-[color:var(--accent)]">
+                    <Icon className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold tracking-tight">
+                      {block.title}
+                    </h3>
+                    <p className="mt-3 text-base leading-7 text-[color:var(--muted-foreground)]">
+                      {block.description}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
             <ProfileSnapshot items={snapshot} />
-            <Card className="p-6">
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[color:var(--muted-foreground)]">
-                Professional summary
-              </p>
-              <p className="mt-4 text-sm leading-7 text-[color:var(--muted-foreground)]">
-                {profile.summary}
-              </p>
-            </Card>
           </div>
         </div>
       </Container>

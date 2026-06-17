@@ -1,12 +1,12 @@
 import AboutSection from "@/components/sections/About";
 import ContactSection from "@/components/sections/Contact";
+import EducationSection from "@/components/sections/Education";
 import EngineeringImpactSection from "@/components/sections/EngineeringImpact";
 import ExperienceSection from "@/components/sections/Experience";
-import GithubSection from "@/components/sections/Github";
 import HighlightsSection from "@/components/sections/Highlights";
 import HeroSection from "@/components/sections/Hero";
-import ResumeSection from "@/components/sections/Resume";
 import SkillsSection from "@/components/sections/Skills";
+import ToolboxSection from "@/components/sections/Toolbox";
 
 export default function Home() {
   return (
@@ -14,11 +14,11 @@ export default function Home() {
       <HeroSection />
       <HighlightsSection />
       <AboutSection />
+      <EngineeringImpactSection />
       <ExperienceSection />
       <SkillsSection />
-      <EngineeringImpactSection />
-      <GithubSection />
-      <ResumeSection />
+      <ToolboxSection />
+      <EducationSection />
       <ContactSection />
     </main>
   );

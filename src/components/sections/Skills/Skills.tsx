@@ -1,19 +1,26 @@
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
+import { profile } from "@/data/profile";
 import { skills } from "@/data/skills";
 import SkillCategory from "./SkillCategory";
 
 export default function SkillsSection() {
+  const capabilityGroups = [
+    { category: "Core Strengths", skills: profile.coreStrengths },
+    ...skills,
+  ];
+
   return (
-    <section id="tech-stack" className="py-20 sm:py-24">
+    <section id="skills" className="section-shell border-b border-[color:var(--border)] py-20 sm:py-24">
       <Container>
         <SectionHeading
-          eyebrow="Tech Stack"
-          title="A stack centered on interfaces, APIs, and real-time delivery."
-          description="The stack reflects the tools used across full-stack delivery, systems work, and AI-assisted engineering."
+          number="05"
+          eyebrow="Skills"
+          title={<>Tools of the <span className="serif-accent">trade</span></>}
+          description="Grouped capabilities for fast scanning without turning the page into a giant badge wall."
         />
-        <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {skills.map((category) => (
+        <div className="mt-12 rounded-lg border border-[color:var(--border)] bg-[color:var(--card)]">
+          {capabilityGroups.map((category) => (
             <SkillCategory key={category.category} category={category} />
           ))}
         </div>

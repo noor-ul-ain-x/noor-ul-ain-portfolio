@@ -5,5 +5,5 @@ interface SkillBadgeProps {
 }
 
 export default function SkillBadge({ skill }: SkillBadgeProps) {
-  return <Badge className="bg-white/5">{skill}</Badge>;
+  return <Badge className="text-sm">{skill}</Badge>;
 }

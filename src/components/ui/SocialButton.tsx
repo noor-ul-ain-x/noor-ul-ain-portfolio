@@ -18,7 +18,7 @@ export default function SocialButton({
       target="_blank"
       rel="noreferrer"
       className={cn(
-        "inline-flex items-center justify-center rounded-full border border-[color:var(--border)] bg-white/5 px-4 py-3 text-sm font-medium transition hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400/60",
+        "inline-flex items-center justify-center rounded-xl border border-[color:var(--border)] bg-white/[0.03] px-4 py-3 text-sm font-medium transition hover:-translate-y-0.5 hover:border-white/20 hover:bg-white/[0.06] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400/50",
         className,
       )}
     >

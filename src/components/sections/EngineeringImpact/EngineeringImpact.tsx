@@ -18,13 +18,14 @@ const variants = {
 
 export default function EngineeringImpactSection() {
   return (
-    <section id="engineering-impact" className="py-20 sm:py-24">
+    <section id="work" className="section-shell border-b border-[color:var(--border)] py-20 sm:py-24">
       <Container>
         <motion.div initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }} variants={variants}>
           <SectionHeading
-            eyebrow="Engineering Impact"
-            title="Capabilities, not just projects."
-            description="These capabilities represent the kinds of systems Noor ships: real-time communication, AI evaluation, and immersive experiences."
+            number="03"
+            eyebrow="Work"
+            title={<>Selected <span className="serif-accent">systems</span></>}
+            description="A focused view of the work most relevant to teams hiring for senior full-stack, real-time, and AI product engineering."
           />
           <div className="mt-10 grid gap-4 lg:grid-cols-3">
             {impact.map((item) => (

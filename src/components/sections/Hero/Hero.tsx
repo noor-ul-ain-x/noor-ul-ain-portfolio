@@ -1,10 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { BriefcaseBusiness, GitBranch, MapPin } from "lucide-react";
 
 import Container from "@/components/ui/Container";
-import Badge from "@/components/ui/Badge";
 import { profile } from "@/data/profile";
 import HeroAvatar from "./HeroAvatar";
 import HeroCTA from "./HeroCTA";
@@ -25,32 +24,45 @@ const itemVariants = {
 };
 
 export default function HeroSection() {
+  const metrics = [
+    { value: "5+", label: "Years Experience" },
+    { value: "35%", label: "Performance Improvement" },
+    { value: "40%", label: "Reduced Polling Overhead" },
+    { value: "AI", label: "Evaluation & Agentic Workflows" },
+  ];
+
   return (
     <section
       id="hero"
-      className="relative overflow-hidden pt-16 sm:pt-20 lg:pt-24"
+      className="section-shell relative overflow-hidden border-b border-[color:var(--border)]"
     >
       <Container className="relative py-16 sm:py-20 lg:py-24">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="show"
-          className="grid items-center gap-14 lg:grid-cols-[1.2fr_0.8fr]"
+          className="grid items-center gap-14 lg:grid-cols-[1.2fr_0.78fr]"
         >
-          <motion.div variants={itemVariants} className="space-y-8">
-            <Badge className="w-fit">
-              <Sparkles className="mr-2 h-3.5 w-3.5" />
-              Senior Full-Stack Engineer
-            </Badge>
-
-            <div className="space-y-5">
-              <h1 className="max-w-3xl text-4xl font-semibold tracking-tight text-balance sm:text-5xl lg:text-6xl">
-                {profile.name}
-              </h1>
-              <p className="max-w-2xl text-xl font-medium text-[color:var(--accent)] sm:text-2xl">
-                {profile.tagline}
+          <motion.div variants={itemVariants} className="space-y-10">
+            <div className="flex items-center gap-4">
+              <span className="h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_0_5px_rgba(52,211,153,0.12)]" />
+              <span className="h-px w-10 bg-[color:var(--border)]" />
+              <p className="max-w-xl bg-white/[0.08] px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.42em] text-[color:var(--foreground)] sm:text-xs">
+                Available for remote engineering roles, AI engineering opportunities, and consulting.
               </p>
-              <p className="max-w-2xl text-base leading-7 text-[color:var(--muted-foreground)] sm:text-lg">
+            </div>
+
+            <div className="space-y-8">
+              <p className="text-sm font-medium uppercase tracking-[0.3em] text-neutral-500">
+                {profile.name}
+              </p>
+              <h1 className="max-w-5xl text-5xl font-semibold leading-[0.98] tracking-tight text-balance sm:text-6xl lg:text-7xl xl:text-[88px]">
+                Senior Full-Stack Engineer for{" "}
+                <span className="serif-accent">real-time systems</span>,{" "}
+                <span className="serif-accent">AI-powered products</span>, and{" "}
+                <span className="serif-accent">agentic AI experiences</span>.
+              </h1>
+              <p className="max-w-3xl text-lg leading-8 text-[color:var(--muted-foreground)] sm:text-xl">
                 {profile.summary}
               </p>
             </div>
@@ -59,23 +71,35 @@ export default function HeroSection() {
               <HeroCTA />
             </motion.div>
 
-            <motion.div
-              variants={itemVariants}
-              className="flex flex-wrap gap-2"
-            >
-              {profile.coreStrengths.map((strength) => (
-                <Badge key={strength}>{strength}</Badge>
+            <motion.div variants={itemVariants} className="grid border-y border-[color:var(--border)] sm:grid-cols-4">
+              {metrics.map((metric) => (
+                <div key={metric.label} className="border-[color:var(--border)] py-6 sm:border-r sm:px-8 sm:first:pl-0 sm:last:border-r-0">
+                  <p className="serif-accent text-4xl leading-none text-[color:var(--foreground)]">{metric.value}</p>
+                  <p className="mt-4 max-w-[180px] text-xs font-semibold uppercase tracking-[0.28em] text-neutral-500">
+                    {metric.label}
+                  </p>
+                </div>
               ))}
             </motion.div>
 
-            <motion.a
+            <motion.div
               variants={itemVariants}
-              href="#career-highlights"
-              className="inline-flex items-center gap-2 text-sm font-medium text-[color:var(--accent)] transition hover:translate-x-1"
+              className="flex flex-wrap items-center gap-x-8 gap-y-4 text-sm text-neutral-500"
             >
-              Explore highlights
-              <ArrowRight className="h-4 w-4" />
-            </motion.a>
+              <span className="inline-flex items-center gap-2">
+                <MapPin className="h-4 w-4" />
+                Pakistan
+              </span>
+              <span>Remote · Global</span>
+              <a href={profile.contact.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 transition hover:text-[color:var(--foreground)]">
+                <GitBranch className="h-4 w-4" />
+                GitHub
+              </a>
+              <a href={profile.contact.linkedin} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 transition hover:text-[color:var(--foreground)]">
+                <BriefcaseBusiness className="h-4 w-4" />
+                LinkedIn
+              </a>
+            </motion.div>
           </motion.div>
 
           <motion.div variants={itemVariants}>

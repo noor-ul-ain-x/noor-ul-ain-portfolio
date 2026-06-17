@@ -18,13 +18,14 @@ const variants = {
 
 export default function ExperienceSection() {
   return (
-    <section id="experience" className="py-20 sm:py-24">
+    <section id="experience" className="section-shell border-b border-[color:var(--border)] py-20 sm:py-24">
       <Container>
         <motion.div initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }} variants={variants}>
           <SectionHeading
-            eyebrow="Experience Timeline"
-            title="A practical track record across product, platform, and AI evaluation work."
-            description="The timeline blends remote consulting, product engineering, real-time systems, and AI-centered delivery."
+            number="04"
+            eyebrow="Experience"
+            title={<>Roles with <span className="serif-accent">senior ownership</span></>}
+            description="Remote product engineering, real-time platform work, team leadership, and AI evaluation experience presented for fast recruiter scanning."
           />
           <ExperienceTimeline items={experience} />
         </motion.div>

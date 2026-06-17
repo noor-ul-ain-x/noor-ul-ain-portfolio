@@ -11,23 +11,23 @@ interface SharedProps extends PropsWithChildren {
 
 function baseClasses(variant: ButtonVariant) {
   const shared =
-    "inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent";
+    "inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400/50 focus-visible:ring-offset-2 focus-visible:ring-offset-black";
 
   if (variant === "primary") {
     return cn(
       shared,
-      "bg-[color:var(--foreground)] text-[color:var(--background)] hover:translate-y-[-1px]",
+      "bg-[color:var(--foreground)] text-[color:var(--background)] hover:-translate-y-0.5 hover:bg-white",
     );
   }
 
   if (variant === "secondary") {
     return cn(
       shared,
-      "border border-[color:var(--border)] bg-white/5 text-[color:var(--foreground)] hover:bg-white/10",
+      "border border-[color:var(--border)] bg-white/[0.03] text-[color:var(--foreground)] hover:-translate-y-0.5 hover:border-white/20 hover:bg-white/[0.06]",
     );
   }
 
-  return cn(shared, "text-[color:var(--foreground)] hover:bg-white/5");
+  return cn(shared, "text-[color:var(--foreground)] hover:bg-white/[0.04]");
 }
 
 export function Button({
