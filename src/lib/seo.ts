@@ -23,6 +23,12 @@ export function createMetadata(
       template: `%s | ${SITE_NAME}`,
     },
     description: SITE_DESCRIPTION,
+    icons: {
+      icon: SITE_OG_IMAGE,
+      shortcut: SITE_OG_IMAGE,
+      apple: SITE_OG_IMAGE,
+    },
+
     keywords: [
       "Noor Ul Ain",
       "Senior Full-Stack Engineer",
